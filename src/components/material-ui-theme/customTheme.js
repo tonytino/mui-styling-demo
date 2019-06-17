@@ -11,7 +11,7 @@ Overrides: https://material-ui.com/customization/globals/
 createMuiTheme: https://material-ui.com/customization/themes/#createmuitheme-options-theme
 */
 
-const EazeTheme = createMuiTheme({
+const CustomTheme = createMuiTheme({
   colors: {
     rastaGradient: 'linear-gradient(to right, red, yellow, green)',
   },
@@ -62,6 +62,6 @@ const EazeTheme = createMuiTheme({
 });
 
 console.log('Google Theme', GoogleTheme);
-console.log('Eaze Theme', EazeTheme);
+console.log('Custom Theme', CustomTheme);
 
-export default EazeTheme;
+export default CustomTheme;

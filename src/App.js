@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import './App.css';
 import {
-  EazeTheme,
+  CustomTheme,
   StyledButton,
   MakeStylesButton,
   UseThemeButton,
@@ -12,7 +12,7 @@ import {
 
 function App() {
   return (
-    <ThemeProvider theme={EazeTheme}>
+    <ThemeProvider theme={CustomTheme}>
       <div className='App'>
         <MakeStylesButton variant='outlined' />
         <StyledButton variant='outlined' />
