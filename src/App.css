@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  margin-top: 50px;
+}
+
+.App button {
+  margin-bottom: 30px;
+}
+
+.App button:last-child {
+  margin-bottom: 0;
+}
