@@ -31,7 +31,7 @@ function StyledButton(props) {
 
 // TODOAH CAN YOU ACCESS THE THEME HERE SO WE CAN USE A THEME COLOR FOR BACKGROUND?
 const ButtonStyled = styled(Button)({
-  color: 'blue',
+  // custom styles go here
 });
 
 export default StyledButton;

@@ -20,4 +20,4 @@ function UseThemeButton(props) {
   );
 }
 
-export default UseThemeButton;
+export default React.memo(UseThemeButton);

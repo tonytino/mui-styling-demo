@@ -12,9 +12,7 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    background: theme.colors.rastaGradient,
-    padding: `${theme.spacing(2)}px ${theme.spacing(3)}px`,
-    color: 'black',
+    // custom styles go here
   },
 }));
 
@@ -28,4 +26,4 @@ function MakeStylesButton(props) {
   );
 };
 
-export default MakeStylesButton;
+export default React.memo(MakeStylesButton);

@@ -32,8 +32,14 @@ function WithStylesButton(props) {
 }
 
 const styles = {
+  /*
+    NOTE: Intentionally using "root" here, not "button"; "button" causes:
+
+    Warning: Material-UI: the key `button` provided to the classes property is not implemented in ForwardRef(Button).
+    You can only override one of the following: root,label,text,textPrimary,textSecondary,outlined,outlinedPrimary,outlinedSecondary,contained,containedPrimary,containedSecondary,focusVisible,disabled,colorInherit,sizeSmall,sizeLarge,fullWidth.
+  */
   root: {
-    color: 'purple',
+    // custom styles go here
   },
 };
 

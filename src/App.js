@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 // https://material-ui.com/customization/themes/#theme-provider
 import { ThemeProvider } from '@material-ui/styles';
+// https://material-ui.com/components/css-baseline/#css-baseline
+import { CssBaseline } from '@material-ui/core';
 import './App.css';
 import {
-  CustomTheme,
+  ButtonVariantControl,
+  CUSTOM_THEME,
   StyledButton,
   MakeStylesButton,
   UseThemeButton,
@@ -11,13 +14,27 @@ import {
 } from './components/material-ui-theme';
 
 function App() {
+  const buttonVariants = ['text', 'outlined', 'contained'];
+  const [variant, setVariant] = useState(buttonVariants[0]);
+
   return (
-    <ThemeProvider theme={CustomTheme}>
+    <ThemeProvider theme={CUSTOM_THEME}>
+      <CssBaseline />
       <div className='App'>
-        <MakeStylesButton variant='outlined' />
-        <StyledButton variant='outlined' />
-        <UseThemeButton variant='outlined' />
-        <WithStylesButton variant='outlined' />
+        <div className='ButtonVariantControlContainer'>
+          <ButtonVariantControl
+            onClickHandler={setVariant}
+            value={variant}
+            options={buttonVariants}
+          />
+        </div>
+
+        <div className='ButtonsContainer'>
+          <MakeStylesButton variant={variant} />
+          <UseThemeButton variant={variant} />
+          <StyledButton variant={variant} />
+          <WithStylesButton variant={variant} />
+        </div>
       </div>
     </ThemeProvider>
   );
