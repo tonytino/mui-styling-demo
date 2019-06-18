@@ -9,15 +9,35 @@ Creating Custom Themes: https://material-ui.com/customization/themes
 ThemeProvider: https://material-ui.com/customization/themes/#theme-provider
 Overrides: https://material-ui.com/customization/globals/
 createMuiTheme: https://material-ui.com/customization/themes/#createmuitheme-options-theme
+Customizing Color: https://material-ui.com/customization/color
+Customizing Palette: https://material-ui.com/customization/palette
+Color Tool: https://material-ui.com/customization/color/#color-tool
 */
 
-const COLORS = {
+export const COLORS = {
   materialBlue: '#2196F3',
 };
 
+export const PALETTE = {
+  primary: {
+    main: '#009688',
+    light: '#52c7b8',
+    dark: '#00675b',
+    contrastText: '#fff',
+  },
+  secondary: {
+    main: '#ffe082',
+    light: '#ffffb3',
+    dark: '#caae53',
+    contrastText: '#000',
+  },
+};
+
 const CUSTOM_THEME = createMuiTheme({
-  // Custom key to define colors in
+  // Custom key to define colors (or anything you want available in the theme object)
   colors: COLORS,
+  // Define a custom palette for Material UI to use
+  palette: PALETTE,
   // Apply props to all instances of a component
   props: {
     // Name of the component to apply props to (you can't target variants)
@@ -39,9 +59,9 @@ const CUSTOM_THEME = createMuiTheme({
       // .contained defines its own `color`
       root: {
         // Pseudo-class styling example
-        '&:hover': {
-          color: COLORS.materialBlue
-        },
+        // '&:hover': {
+        //   color: COLORS.materialBlue
+        // },
       },
       // The variant-specific override styles for the component
       // e.g. <Button variant='contained' />

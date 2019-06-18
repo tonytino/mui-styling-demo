@@ -30,10 +30,10 @@ function App() {
         </div>
 
         <div className='ButtonsContainer'>
-          <MakeStylesButton variant={variant} />
-          <UseThemeButton variant={variant} />
-          <StyledButton variant={variant} />
-          <WithStylesButton variant={variant} />
+          <MakeStylesButton variant={variant} color='primary' />
+          <UseThemeButton variant={variant} color='primary' />
+          <StyledButton variant={variant} color='primary' />
+          <WithStylesButton variant={variant} color='primary' />
         </div>
       </div>
     </ThemeProvider>

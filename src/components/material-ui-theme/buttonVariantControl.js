@@ -12,7 +12,7 @@ function ButtonVariantControl(props) {
     options,
   } = props;
   return (
-    <ButtonGroup>
+    <ButtonGroup color='primary'>
       {
         options.map(option => {
           return (
