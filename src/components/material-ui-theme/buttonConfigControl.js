@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 // https://material-ui.com/components/buttons/#grouped-buttons
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
-function ButtonVariantControl(props) {
+function ButtonConfigControl(props) {
   const {
     value,
     onClickHandler,
@@ -30,4 +30,4 @@ function ButtonVariantControl(props) {
   );
 };
 
-export default React.memo(ButtonVariantControl);
+export default React.memo(ButtonConfigControl);

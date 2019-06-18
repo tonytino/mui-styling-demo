@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
 import './App.css';
 import {
-  ButtonVariantControl,
+  ButtonConfigControl,
   CUSTOM_THEME,
   StyledButton,
   MakeStylesButton,
@@ -17,23 +17,31 @@ function App() {
   const buttonVariants = ['text', 'outlined', 'contained'];
   const [variant, setVariant] = useState(buttonVariants[0]);
 
+  const buttonColors = ['default', 'primary', 'secondary', 'inherit'];
+  const [color, setColor] = useState(buttonColors[0]);
+
   return (
     <ThemeProvider theme={CUSTOM_THEME}>
       <CssBaseline />
       <div className='App'>
-        <div className='ButtonVariantControlContainer'>
-          <ButtonVariantControl
+        <div className='ButtonConfigControlsContainer'>
+          <ButtonConfigControl
             onClickHandler={setVariant}
             value={variant}
             options={buttonVariants}
           />
+          <ButtonConfigControl
+            onClickHandler={setColor}
+            value={color}
+            options={buttonColors}
+          />
         </div>
 
         <div className='ButtonsContainer'>
-          <MakeStylesButton variant={variant} color='primary' />
-          <UseThemeButton variant={variant} color='primary' />
-          <StyledButton variant={variant} color='primary' />
-          <WithStylesButton variant={variant} color='primary' />
+          <MakeStylesButton variant={variant} color={color} />
+          <UseThemeButton variant={variant} color={color} />
+          <StyledButton variant={variant} color={color} />
+          <WithStylesButton variant={variant} color={color} />
         </div>
       </div>
     </ThemeProvider>

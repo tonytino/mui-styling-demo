@@ -4,8 +4,19 @@
   align-items: center;
 }
 
-.App .ButtonVariantControlContainer {
+.App .ButtonConfigControlsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 24px 0;
+}
+
+.App .ButtonConfigControlsContainer .MuiButtonGroup-root {
+  margin-bottom: 12px;
+}
+
+.App .ButtonConfigControlsContainer .MuiButtonGroup-root:last-child {
+  margin-bottom: 0;
 }
 
 .App .ButtonsContainer {
