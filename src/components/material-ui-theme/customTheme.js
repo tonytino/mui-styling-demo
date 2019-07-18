@@ -15,21 +15,24 @@ Color Tool: https://material-ui.com/customization/color/#color-tool
 */
 
 export const COLORS = {
-  materialBlue: '#2196F3',
+  white: '#FFF',
+  blue: '#00AAE7',
+  purple: '#9360A8',
+  green: '#42BC97',
+  yellow: '#FACA18',
+  darkBlue: '#126CAB',
+  orange: '#F05B4B',
+  gray: '#5C515A',
 };
 
 export const PALETTE = {
   primary: {
-    main: '#009688',
-    light: '#52c7b8',
-    dark: '#00675b',
-    contrastText: '#fff',
+    main: COLORS.blue,
+    contrastText: COLORS.white,
   },
   secondary: {
-    main: '#ffe082',
-    light: '#ffffb3',
-    dark: '#caae53',
-    contrastText: '#000',
+    main: COLORS.yellow,
+    contrastText: COLORS.gray,
   },
 };
 
@@ -60,7 +63,7 @@ const CUSTOM_THEME = createMuiTheme({
       root: {
         // Pseudo-class styling example
         // '&:hover': {
-        //   color: COLORS.materialBlue
+        //   color: COLORS.blue
         // },
       },
       // The variant-specific override styles for the component
@@ -72,11 +75,11 @@ const CUSTOM_THEME = createMuiTheme({
         // custom styles go here
       },
     },
-  }
+  },
 });
 
 console.log('Google Theme', GOOGLE_THEME);
-console.log('Colors', COLORS);
 console.log('Custom Theme', CUSTOM_THEME);
+console.log('Colors', COLORS);
 
 export default CUSTOM_THEME;
