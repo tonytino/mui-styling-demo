@@ -7,8 +7,15 @@ import Button from '@material-ui/core/Button';
 /*
   styled
   - https://material-ui.com/styles/basics/#styled-components-api
-  - Can be utilized by either a functional or class component
-  - Uncomment the component below to see this example using a class component
+  - Access to props object (if styling solution supports it) for props-driven styles
+  - No access to theme object (though, you can import it...)
+  - Customize nested elements (if styling solution supports it)
+    - makeStyles/withStyles have a simpler solution for this
+  - Ideal for leaning heavily into a styling solution
+  - You can use numerous styling solutions (e.g Emotion!)
+    https://material-ui.com/guides/interoperability/
+  - Overrides defined in the custom theme are still applied, if applicable
+  - Can be used by either a functional or class component
 */
 
 // class StyledButton extends React.PureComponent {
@@ -29,9 +36,12 @@ function StyledButton(props) {
   );
 };
 
-// TODOAH CAN YOU ACCESS THE THEME HERE SO WE CAN USE A THEME COLOR FOR BACKGROUND?
-const ButtonStyled = styled(Button)({
-  // custom styles go here
-});
+const ButtonStyled = styled(Button)(props => ({
+  '& .MuiButton-label': props => (props.variant.contained ? {color: 'red'} : {
+    background: '-webkit-linear-gradient(teal, aqua)',
+    '-webkit-background-clip': 'text',
+    '-webkit-text-fill-color': 'transparent'
+  })
+}));
 
 export default StyledButton;

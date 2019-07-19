@@ -10,13 +10,16 @@ import { css, jsx } from '@emotion/core'
 /*
   useTheme
   - https://material-ui.com/styles/advanced/#accessing-the-theme-in-a-component
-  - Use this when you need access to the theme object for custom styles that
-    depend on the theme object properties
-    - Ideal for one-off designs using theme properties
+  - Access to props object for props-driven styles
+  - Access to theme object for custom styles that depend on the theme object props
+  - Customize nested elements
+    - makeStyles/withStyles have a simpler solution for this
   - Overrides defined in the custom theme are still applied, if applicable
-  - Can only be used with functional components
+  - Can ONLY be used with functional components
     - Hook Approach:  useTheme()
     - HOC Approach:   withTheme()
+  - useTheme is a wrapper for useContext
+    https://github.com/mui-org/material-ui/blob/master/packages/material-ui-styles/src/useTheme/useTheme.js
 */
 
 // Hook Approach: useTheme

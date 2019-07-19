@@ -7,13 +7,12 @@ import Button from '@material-ui/core/Button';
 /*
   makeStyles
   - https://material-ui.com/styles/advanced/#makestyles
-  - Use this when you need access to the theme or props objects
-    - You can define advanced configurations (e.g. numerous classes can be
-      defined in makeStyles and used on the root and nested elements)
-  - Use this when you need numerous one-off class names to apply on the root
-    and nested elements
+  - Access to props object for props-driven styles
+  - Access to theme object for custom styles that depend on the theme object props
+  - Customize nested elements
+    - Generates class names to apply on the root and nested elements
   - Overrides defined in the custom theme are still applied, if applicable
-  - Can only be used with functional components (and requires React Hooks)
+  - Can ONLY be used with functional components (AND requires React Hooks)
 */
 
 const useStyles = makeStyles(theme => ({
@@ -26,7 +25,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function MakeStylesButton(props) {
-  // useStyles accepts props, which enables prop-driven customizations
   const classes = useStyles(props);
   return (
     <Button {...props} className={classes.myButton}>
