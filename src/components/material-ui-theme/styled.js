@@ -37,7 +37,7 @@ function StyledButton(props) {
 };
 
 const ButtonStyled = styled(Button)(props => ({
-  '& .MuiButton-label': props => (props.variant.contained ? {color: 'red'} : {
+  '& .MuiButton-label': props => (props.variant === 'contained' ? {} : {
     background: '-webkit-linear-gradient(teal, aqua)',
     '-webkit-background-clip': 'text',
     '-webkit-text-fill-color': 'transparent'
