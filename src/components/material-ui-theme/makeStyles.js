@@ -10,7 +10,8 @@ import Button from '@material-ui/core/Button';
   - Access to props object for props-driven styles
   - Access to theme object for custom styles that depend on the theme object props
   - Customize nested elements
-    - Generates class names to apply on the root and nested elements
+    - Create custom class names to apply on the root and nested elements
+    - makeStyles offers the easiest, most flexible interface for nested mods
   - Overrides defined in the custom theme are still applied, if applicable
   - Can ONLY be used with functional components (AND requires React Hooks)
 */
