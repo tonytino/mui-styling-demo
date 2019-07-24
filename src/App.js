@@ -11,7 +11,7 @@ import {
   MakeStylesButton,
   UseThemeButton,
   WithStylesButton,
-} from './components/material-ui-theme';
+} from './components/mui';
 
 function App() {
   const buttonVariants = ['text', 'outlined', 'contained'];
