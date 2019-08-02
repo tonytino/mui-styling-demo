@@ -18,13 +18,3 @@
 .App .ButtonConfigControlsContainer .MuiButtonGroup-root:last-child {
   margin-bottom: 0;
 }
-
-.App .ButtonsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.App .ButtonsContainer button {
-  margin: 24px 0;
-}

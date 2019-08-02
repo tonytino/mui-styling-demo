@@ -7,12 +7,17 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 function ButtonConfigControl(props) {
   const {
-    value,
+    color,
     onClickHandler,
     options,
+    value,
+    variant,
   } = props;
   return (
-    <ButtonGroup color='primary'>
+    <ButtonGroup
+      color={color ? color : 'primary'}
+      variant={variant ? variant : 'contained'}
+    >
       {
         options.map(option => {
           return (

@@ -5,20 +5,17 @@ import { ThemeProvider } from '@material-ui/styles';
 import { CssBaseline } from '@material-ui/core';
 import './App.css';
 import {
+  MuiDemo,
+  Development,
+ } from './components';
+import {
   ButtonConfigControl,
   CUSTOM_THEME,
-  StyledButton,
-  MakeStylesButton,
-  UseThemeButton,
-  WithStylesButton,
 } from './components/mui';
 
 function App() {
-  const buttonVariants = ['text', 'outlined', 'contained'];
-  const [variant, setVariant] = useState(buttonVariants[0]);
-
-  const buttonColors = ['default', 'primary', 'secondary', 'inherit'];
-  const [color, setColor] = useState(buttonColors[0]);
+  const APP_MODES = ['MuiDemo', 'Development'];
+  const [appMode, setAppMode] = useState(APP_MODES[1]);
 
   return (
     <ThemeProvider theme={CUSTOM_THEME}>
@@ -26,23 +23,17 @@ function App() {
       <div className='App'>
         <div className='ButtonConfigControlsContainer'>
           <ButtonConfigControl
-            onClickHandler={setVariant}
-            value={variant}
-            options={buttonVariants}
-          />
-          <ButtonConfigControl
-            onClickHandler={setColor}
-            value={color}
-            options={buttonColors}
+            variant='contained'
+            onClickHandler={setAppMode}
+            value={appMode}
+            options={APP_MODES}
           />
         </div>
 
-        <div className='ButtonsContainer'>
-          <MakeStylesButton variant={variant} color={color} />
-          <UseThemeButton variant={variant} color={color} />
-          <StyledButton variant={variant} color={color} />
-          <WithStylesButton variant={variant} color={color} />
-        </div>
+        {appMode === APP_MODES[0]
+          ? <MuiDemo />
+          : <Development />
+        }
       </div>
     </ThemeProvider>
   );
